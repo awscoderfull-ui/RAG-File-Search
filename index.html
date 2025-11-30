@@ -1,0 +1,54 @@
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.29.0"
+  }
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini RAG System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gem-onyx': '#f0fdf4',        /* Main Background: Green-50 */
+              'gem-slate': '#ffffff',       /* Card Background: White */
+              'gem-mist': '#bbf7d0',        /* Borders/Secondary: Green-200 */
+              'gem-offwhite': '#14532d',    /* Text: Green-900 (Dark Green for readability) */
+              'gem-teal': '#15803d',        /* Accents: Green-700 */
+              'gem-blue': '#16a34a',        /* Primary: Green-600 */
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              'progress-stripes': {
+                'from': { backgroundPosition: '1rem 0' },
+                'to': { backgroundPosition: '0 0' },
+              },
+            },
+            animation: {
+              'progress-stripes': 'progress-stripes 1s linear infinite',
+            },
+          }
+        }
+      }
+    </script>
+  
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gem-onyx font-sans antialiased text-gem-offwhite">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
